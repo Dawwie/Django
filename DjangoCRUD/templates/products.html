@@ -1,0 +1,9 @@
+    <ul>
+        {% for product in products %}
+            <a href = "{% url 'update_product' product.id %}">
+                <li>{{ product.description }}</li>
+            </a>
+        {% endfor %}
+    </ul>
+
+<a href="{% url 'create_product' %}">New product</a>
